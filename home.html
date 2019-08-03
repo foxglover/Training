@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+
+   
+    <script>
+
+        var urls = ["https://www.sogosurvey.com/", "video.html"];
+
+            function randomDirect()
+            {
+                window.location = urls[Math.floor(urls.length * Math.random())];
+            }
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1 align="center" style="color:darkslateblue">Social Engineering Education</h1>
+        <h3 align="center" style="color:darkslateblue">an experiment for self-employed people</h3>
+        <br />
+        <p>Thank you for taking the time to test this educational tool for self-employed people.</p>
+        <p>You will be asked to complete three tasks (not necessarily in this order).</p>
+
+        <ul>
+            <li>Complete a <b>survey</b></li>
+            <li>Watch 4 short <b>videos</b> </li>
+            <li>Take a quick <b>quiz</b> to consolidate knowledge learnt from the videos</li>
+
+        </ul>
+
+        <p>The whole process takes around 20 minutes in total. You can stop at any time.</p>
+
+        <p>All data collected will be anonymous and used in my MSc Computer Science research thesis for the University of Plymouth, discussing social engineering awareness in the self-employed community and the efficacy of this training package.</p>
+
+        <p>You can contact me at jennifer.sercombe@postgrad.plymouth.ac.uk with any questions.</p>
+        <div style="text-align:center">
+            <a align="center" class="btn btn-success" role="button" onclick="randomDirect()"><b>Start the Experiment</b></a>
+        </div>
+    </div>
+        
+
+</body>
+</html>
