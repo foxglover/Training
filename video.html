@@ -1,4 +1,5 @@
 ﻿
+
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml">
 <head>
@@ -7,35 +8,73 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.png">
-    
-    
+
+
 </head>
 <body>
-    <div id="videos">
+    <div id="videos" style="text-align:center;">
         <h1 align="center" style="color:floralwhite;">Social Engineering Educational Videos</h1>
+        <p style="color:floralwhite;text-align:center">
+            This is a 10 minute video explaining why social engineering awareness is important for your business</pstyle="color:floralwhite;">
 
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KSy2OPHV0AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <div>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLw6EX1OZfwnmtUD4MFhsfkW-_barwWnJa&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/KKLr-4Tgs0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8aCKmfW-Vag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/xdYV54WtqeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <div style="text-align:center;">
+                <a align="center" href="quiz.html" class="btn btn-lg btn-danger" role="button"><b>I've watched the video - take me to the Quiz</b></a>
+            </div>
 
     </div>
 
-            <div style="text-align:center;">
-                <a align="center" href="quiz.html" class="btn btn-danger" role="button"><b>I've watched all 4 videos - take me to the Quiz</b></a>
-            </div>
-      
-   
+    <div>
+        <p style="color:floralwhite;text-align:center;">You can re-watch individual parts of the videos again by clicking one of the following:</p>
+    </div>
+
+    <div class="buttons" style="text-align:center;">
+        <div class="button display">
+
+            <hr class="w3-border-grey" style="margin:auto;width:50%">
+            <p>
+                <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-primary" onclick="play1()">Introduction</button>
+                    <button type="button" class="btn btn-primary" onclick="play2()">Phishing and Phone Scams</button>
+                    <button type="button" class="btn btn-primary" onclick="play3()">Passwords and Security </button>
+                    <button type="button" class="btn btn-primary" onclick="play4()">What to do in an attack</button>
+                </div>
+
+
+            </p>
+            <div id="youtube-frame"></div>
+        </div>
+    </div>
 </body>
+
+<script>
+        function play1() {
+            var frame = document.getElementById("youtube-frame");
+            frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KSy2OPHV0AQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+        }
+
+        function play2() {
+            var frame = document.getElementById("youtube-frame");
+            frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KKLr-4Tgs0U' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+        }
+        function play3() {
+            var frame = document.getElementById("youtube-frame");
+            frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/8aCKmfW-Vag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+        }
+        function play4() {
+            var frame = document.getElementById("youtube-frame");
+            frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/xdYV54WtqeE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+        }
+</script>
+
+<div style="text-align:center;">
+    <a align="center" href="quiz.html" class="btn btn-lg btn-danger" role="button"><b>I've watched the video - take me to the Quiz</b></a>
+</div>
+
+
+
 </html>
 
