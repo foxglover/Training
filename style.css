@@ -281,7 +281,7 @@ body {
 
 /* Modal Body */
 .modal-body {
-    padding: 2px 16px;
+    padding: 20px 16px;
 }
 
 /* Modal Footer */
@@ -326,4 +326,16 @@ body {
         top: 0;
         opacity: 1
     }
+}
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+}
+.jumbotron {
+   opacity:0.9
+    
 }
