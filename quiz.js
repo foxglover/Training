@@ -306,7 +306,7 @@ function scoreRender() {
     // choose the feedback based on the scorePerCent
     let feedback = (scorePerCent >= 5) ? "Well done, you really know your stuff!</br></br>It's important \
 for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
-        (scorePerCent >= 4) ? "Pretty good! You're well on your way to staying safe </br></br>It's important \
+        (scorePerCent >= 4) ? "Pretty good! </br></br>It's important \
 for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
             (scorePerCent >= 3) ? "Good effort!.</br></br>It's important \
 for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
