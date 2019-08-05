@@ -75,7 +75,7 @@ usually mean the maunfacturer has become aware of a hackable flaw in your softwa
         choiceD: "All of the above",
         feedback: "Correct! If unsure, hang up the phone, look up their legitimate number online. Wait 10 minutes before calling back in case your're still \
 connected, or call with a different phone. ",
-        wrongFeedback: "Sorry, this is wrong. If unsure of who you're talking to, hang up the phone, look up their legitimate number online. Wait 10 minutes \
+        wrongFeedback: "All of these are correct, so the answer was 'All of the above'. If unsure of who you're talking to, hang up the phone, look up their legitimate number online. Wait 10 minutes \
 before calling back in case your're still connected, or call with a different phone. ",
         correct: "D"
     }, {
@@ -312,7 +312,7 @@ for the research that you now complete the survey, if you didn't complete one at
 for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
                 (scorePerCent >= 2) ? "Good effort!</br></br>It's important \
 for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
-                    "Well done for trying.</br></br>It's important for the research that you now complete the survey if you didn't complete one at the start. Thank you!";
+                    "Well done for trying.</br></br>It's important for the research that you now complete the survey, if you didn't complete one at the start. Thank you!";
 
 
 
