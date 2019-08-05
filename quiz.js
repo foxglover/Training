@@ -321,7 +321,23 @@ function scoreRender() {
 }
 
 
+function play1() {
+    var frame = document.getElementById("youtube-frame");
+    frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KSy2OPHV0AQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+}
 
+function play2() {
+    var frame = document.getElementById("youtube-frame");
+    frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KKLr-4Tgs0U' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+}
+function play3() {
+    var frame = document.getElementById("youtube-frame");
+    frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/8aCKmfW-Vag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+}
+function play4() {
+    var frame = document.getElementById("youtube-frame");
+    frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/xdYV54WtqeE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+}
 
 
 

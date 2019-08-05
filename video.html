@@ -14,12 +14,12 @@
 <body>
     <div class="jumbotron jumbotron-fluid" style="background-color:darkcyan">
         <div class="container">
-            <h1 style="color:floralwhite";>Social Engineering Educational Videos</h1>
-            <p style="color:floralwhite";>This is a 10 minute video series explaining why social engineering awareness is important for your business. Please watch the whole video and then click through to the 3 minute quiz</pstyle="color:floralwhite;>
+            <h1 style="color:floralwhite" ;>Social Engineering Educational Videos</h1>
+            <p style="color:floralwhite" ;>This is a 10 minute video series explaining why social engineering awareness is important for your business. Please watch the whole video and then click through to the 3 minute quiz</pstyle="color:floralwhite;>
         </div>
     </div>
     <div id="videos" style="text-align:center;">
-        
+
         <div style="text-align:center;">
             <a align="center" href="quiz.html" class="btn btn-lg btn-primary" role="button" style="margin-top:10px;"><b>I've watched the video - take me to the Quiz</b></a>
         </div>
@@ -40,22 +40,32 @@
         <div class="button display">
 
 
-            <div class="btn-group-lg btn btn-info">
-                <button type="button" onclick="play1()">Introduction</button>
-                <button type="button" onclick="play2()">Phishing and Phone Scams</button>
-                <button type="button" onclick="play3()">Passwords and Security </button>
-                <button type="button" onclick="play4()">What to do in an attack</button>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-primary" onclick="play1()">Introduction</button>
+                <button type="button" class="btn btn-primary" onclick="play2()">Phishing and Phone Scams</button>
+                <button type="button" class="btn btn-primary" onclick="play3()">Passwords and Security </button>
+                <button type="button" class="btn btn-primary" onclick="play4()">What to do in an attack</button>
             </div>
 
 
             </p>
             <div id="youtube-frame"></div>
-        </div>
-        <footer class="page-footer font-small" style="background-color:darkcyan"> </footer>
-    </div>
+      
 
 </body>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
 
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        © 2018 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<!--
 <script>
         function play1() {
             var frame = document.getElementById("youtube-frame");
@@ -75,7 +85,7 @@
             frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/xdYV54WtqeE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
         }
 </script>
-
+    -->
 
 </html>
 
