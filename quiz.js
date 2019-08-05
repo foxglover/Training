@@ -17,8 +17,10 @@ const scoreDiv = document.getElementById("scoreContainer");
 const qFeedback = document.getElementById("scoreContainer");
 const feedbackModal = document.getElementById("feedbackModal")
 const closeButton = document.getElementById("closeButton")
-var modal = document.getElementById("myModal");
-var wrongModal = document.getElementById("wrongModal");
+var modal = document.getElementById("modal");
+var modalbody = document.getElementById("mb");
+
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
@@ -26,30 +28,32 @@ var span = document.getElementsByClassName("close")[0];
 
 // the questions
 let questions = [
-  {
-        question : "What makes a strong password?",
-        imgSrc : "img/pword.jpg",
-        choiceA : "Mother's maiden name",
-        choiceB : "3 words joined together",
+    {
+        question: "What makes a strong password?",
+        imgSrc: "img/pword.jpg",
+        choiceA: "Mother's maiden name",
+        choiceB: "3 words joined together",
         choiceC: "Your favourite sports team",
         choiceD: "Your pet's name",
         feedback: "Excellent work! The NCSC recommend using 3 random words together or using a password manager",
         wrongFeedback: "Sorry, this is wrong. The NCSC recommend using 3 random words together, or using a password manager",
-        correct : "B"
-  
-    },{
+        correct: "B"
+
+    }, {
         question: "What could make you more vulnerable to social engineering?",
         imgSrc: "img/you.jpg",
         choiceA: "Always using two factor authentication",
         choiceB: "Not activating authentication methods on your devices",
         choiceC: "A new life situation, such as buying a house",
         choiceD: "Having a weak password, such as <br/> 'I love you'",
-        feedback: "This is true! Give yourself more time to respond to enquiries and phone calls when you find yourself in a new life situation e.g. Buying a new house",
+        feedback: "This is true! Give yourself more time to respond to enquiries and phone calls when you find yourself in a new life situation \
+i.e. a divorce, an exciting new business, a new baby, a bereavement, getting married or in a new relationship.",
         wrongFeedback: "'New life situation' is the correct answer. This has a significant impact on the success of social engineering attacks. \
-Give yourself more time to respond to requests when you find yourself in a new life situation, such as a buying a new house",
+Give yourself more time to respond to requests when you find yourself in a new life situation, such as a divorce, an exciting new business, a new relationship or baby, \
+getting married, or a bereavement.",
         correct: "C"
     }, {
-       
+
         question: "Why is installing updates essential to security?",
         imgSrc: "img/update.jpg",
         choiceA: "They ensure your system runs fast",
@@ -61,31 +65,31 @@ Give yourself more time to respond to requests when you find yourself in a new l
         wrongFeedback: "Wrong! The correct answer is 'Software has flaws which hackers exploit. Updates provide fixes to stop them' Security updates \
 usually mean the maunfacturer has become aware of a hackable flaw in your software. Installing updates provides a 'patch' to fix the problem and protect your system",
         correct: "C"
-    }, 
-     {
+    },
+    {
         question: "What are some clues that you might be talking to a scammer on the phone?",
         imgSrc: "img/phone.jpg",
         choiceA: "They want you to make a quick decision",
         choiceB: "They tell you they are from somewhere you'd usually trust i.e. police, HMRC",
         choiceC: "Their proposition sounds like it could make you some quick money",
         choiceD: "All of the above",
-         feedback: "Correct! If unsure, hang up the phone, look up their legitimate number online. Wait 10 minutes before calling back in case your're still \
-connected. ",
-         wrongFeedback: "Sorry, this is wrong. If unsure of who you're talking to, hang up the phone, look up their legitimate number online. Wait 10 minutes \
-before calling back in case your're still connected. ",
-         correct: "D"
+        feedback: "Correct! If unsure, hang up the phone, look up their legitimate number online. Wait 10 minutes before calling back in case your're still \
+connected, or call with a different phone to verify that it's legitimate. ",
+        wrongFeedback: "Sorry, this is wrong. If unsure of who you're talking to, hang up the phone, look up their legitimate number online. Wait 10 minutes \
+before calling back in case your're still connected, or call with a different phone to verify that it's legitimate. ",
+        correct: "D"
     }, {
         question: "Who should you contact to report internet or telephone fraud?",
         imgSrc: "img/police.jpg",
-        choiceA: "Fraud Reporters",
-        choiceB: "Action Police",
+        choiceA: "Fraud Reporters  . ",
+        choiceB: "Action Fraudsters",
         choiceC: "Assess Fraud",
         choiceD: "Action Fraud",
         feedback: "Good thinking! Reporting to Action Fraud helps protect others and catch criminals.",
         wrongFeedback: "The correct answer is 'Action Fraud'. Reporting fraud helps protect others and catch criminals.",
         correct: "D"
     },
-    
+
 
 
 
@@ -103,51 +107,51 @@ let TIMER;
 let score = 0;
 
 // render a question
-function renderQuestion(){
+function renderQuestion() {
     let q = questions[runningQuestion];
-    
-    question.innerHTML = "<p>"+ q.question +"</p>";
-    qImg.innerHTML = "<img src="+ q.imgSrc +">";
+
+    question.innerHTML = "<p>" + q.question + "</p>";
+    qImg.innerHTML = "<img src=" + q.imgSrc + ">";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
 }
 
-start.addEventListener("click",startQuiz);
+start.addEventListener("click", startQuiz);
 
 // start quiz
-function startQuiz(){
+function startQuiz() {
     start.style.display = "none";
     renderQuestion();
     quiz.style.display = "block";
     renderProgress();
     renderCounter();
-    TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+    TIMER = setInterval(renderCounter, 1000); // 1000ms = 1s
 }
 
 // render progress
-function renderProgress(){
-    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
-        progress.innerHTML += "<div class='prog' id="+ qIndex +"></div>";
+function renderProgress() {
+    for (let qIndex = 0; qIndex <= lastQuestion; qIndex++) {
+        progress.innerHTML += "<div class='prog' id=" + qIndex + "></div>";
     }
 }
 
 // counter render
 
-function renderCounter(){
-    if(count <= questionTime){
+function renderCounter() {
+    if (count <= questionTime) {
         counter.innerHTML = count;
         timeGauge.style.width = count * gaugeUnit + "px";
         count++
-    }else{
+    } else {
         count = 0;
         // change progress color to red
         answerIsWrong();
-        if(runningQuestion < lastQuestion){
+        if (runningQuestion < lastQuestion) {
             runningQuestion++;
             renderQuestion();
-        }else{
+        } else {
             // end the quiz and show the score
             clearInterval(TIMER);
             scoreRender();
@@ -160,7 +164,7 @@ function renderCounter(){
 // checkAnwer
 
 function checkAnswer(answer) {
-    
+
     let q = questions[runningQuestion];
 
     if (answer == q.correct) {
@@ -168,57 +172,37 @@ function checkAnswer(answer) {
         score++;
 
 
+
         // When the user clicks on the button, open the modal 
-        
-        modal.style.display = "block";
-        //('.modal-body').innerHTML += "<p>" + q.feedback + "</p>";
-        //modal.find('.modal-content.modal-body').innerHTML += "<p>" + q.feedback + "</p>";
-        //modal.modal('show');
-        //modal.find('.modal-content').innerHTML += "<p>" + q.feedback + "</p>";
-        modal.innerHTML += "<p>" + q.feedback + "</p>" ;
-   
-            
-    modal.onclick = function () {
-        // This is possibly useful ->       
-        //modal.innerHTML = "";
-        
 
-        modal.style.display = "none";
-    }
+        /* modal.style.display = "block";
+         //('.modal-body').innerHTML += "<p>" + q.feedback + "</p>";
+         //modal.find('.modal-content.modal-body').innerHTML += "<p>" + q.feedback + "</p>";
+         //modal.modal('show');
+         //modal.find('.modal-content').innerHTML += "<p>" + q.feedback + "</p>";
+         modalbody.innerHTML = "<p>" + q.feedback + "</p>" ;*/
 
-        //When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        displayModal("correct", q.feedback);
 
-             modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-           // modal.innerHTML = "";
-
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
 
         // change progress color to green
 
         answerIsCorrect();
-        
+
         // display feedback
         //alert(q.feedback);
 
     }
 
-        else {
+    else {
         // display the feedback for the getting the question wrong 
-       // alert(q.wrongFeedback);
+        // alert(q.wrongFeedback);
         // answer is wrong
         // change progress color to red
         // When the user clicks on the button, open the modal 
 
-        wrongModal.style.display = "block";
-        wrongModal.innerHTML +="<p>" + q.wrongFeedback + "</p>";
+        /*wrongModal.style.display = "block";
+        wrongModalbody.innerHTML +"<p>" + q.wrongFeedback + "</p>";
 
         wrongModal.onclick = function () {
             
@@ -237,67 +221,103 @@ function checkAnswer(answer) {
             if (event.target == wrongModal) {
                 wrongModal.style.display = "none";
             }
-        }
+        }*/
+        displayModal("wrong", q.wrongFeedback);
 
         answerIsWrong();
-        
+
     }
 
-  
+
     count = 0;
-    if(runningQuestion < lastQuestion){
+    if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion();
-    }else{
+    } else {
         // end the quiz and show the score
         clearInterval(TIMER);
         scoreRender();
     }
 }
 
-// answer is correct
-function answerIsCorrect(){
-    document.getElementById(runningQuestion).style.backgroundColor = "lightgreen";
-    
-        //window.alert("your answer is correct");
+function displayModal(disclass, message) {
+    if (disclass == "correct") {
+        modal.classList.remove("wrong");
+        modal.classList.add("correct");
+    } else {
+        modal.classList.add("wrong");
+        modal.classList.remove("correct");
+    }
+    modalbody.innerHTML = message;
+    modal.style.display = "block";
 
-    
+    modal.onclick = function () {
+        // This is possibly useful ->       
+        //modal.innerHTML = "";
+
+
+        modal.style.display = "none";
+    }
+
+    //When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        // modal.innerHTML = "";
+
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+// answer is correct
+function answerIsCorrect() {
+    document.getElementById(runningQuestion).style.backgroundColor = "lightgreen";
+
+    //window.alert("your answer is correct");
+
+
 }
 
 // answer is Wrong
-function answerIsWrong(){
+function answerIsWrong() {
     document.getElementById(runningQuestion).style.backgroundColor = "red";
 }
 
 // score render
-function scoreRender(){
+function scoreRender() {
     scoreDiv.style.display = "block";
-    
+
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(score);
-    
+
     // choose the image based on the scorePerCent
     let img = (scorePerCent >= 5) ? "img/5.png" :
-              (scorePerCent >= 4) ? "img/4.png" :
-              (scorePerCent >= 3) ? "img/3.png" :
-              (scorePerCent >= 2) ? "img/2.png" :
+        (scorePerCent >= 4) ? "img/4.png" :
+            (scorePerCent >= 3) ? "img/3.png" :
+                (scorePerCent >= 2) ? "img/2.png" :
                     "img/1.png";
 
     // choose the feedback based on the scorePerCent
     let feedback = (scorePerCent >= 5) ? "Well done, you really know your stuff!" :
-                   (scorePerCent >= 4) ? "Good work! " :
-                   (scorePerCent >= 3) ? "Good effort!" :
-                   (scorePerCent >= 2) ? "Hmm.. Maybe have another look at the videos when you have time." :
-                    " Oh dear. It seems like you could do with more help protecting your customers and yourself.";
-    
-                  
+        (scorePerCent >= 4) ? "Pretty good work! " :
+            (scorePerCent >= 3) ? "Good effort, but you and your customers may still be vulnerable. Consider looking over the training again" :
+                (scorePerCent >= 2) ? "In order to protect yours and your customer data please consider looking again at the training" :
+                    " You (and therefore your customers), are vulnerable to fraud. Please consider looking again at the training";
 
-   
-    scoreDiv.innerHTML = "<img src="+ img +">";
+
+
+
+    scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + "<br>" + "You scored " + scorePerCent + "/" + questions.length + "<br>" + feedback + "</p>";
-    scoreDiv.innerHTML += "<a href='https://survey.sogosurvey.com/r/H3LIti' class='btn class=btn btn btn-lg btn-info' style='margin-bottom:30px' role='button'>Take me to the survey</a>";
-    
-    
+    scoreDiv.innerHTML += "<a href='https://www.sogosurvey.com' class='btn btn-info' role='button'>Take me to the survey</a>";
+
+
 }
 
 
