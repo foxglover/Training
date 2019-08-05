@@ -305,13 +305,13 @@ function scoreRender() {
 
     // choose the feedback based on the scorePerCent
     let feedback = (scorePerCent >= 5) ? "Well done, you really know your stuff!</br></br>It's important \
-for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
         (scorePerCent >= 4) ? "Pretty good! You're well on your way to staying safe </br></br>It's important \
-for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
             (scorePerCent >= 3) ? "Good effort!.</br></br>It's important \
-for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
                 (scorePerCent >= 2) ? "Good effort!</br></br>It's important \
-for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+for the research that you now complete the survey, if you didn't complete one at the start. Thank you!" :
                     "Well done for trying.</br></br>It's important for the research that you now complete the survey if you didn't complete one at the start. Thank you!";
 
 
@@ -319,7 +319,7 @@ for the research that you now complete the survey if you didn't complete one at 
 
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + "<br>" + "You scored " + scorePerCent + "/" + questions.length + "<br>" + feedback + "</p>";
-    scoreDiv.innerHTML += "<a href='https://survey.sogosurvey.com/r/H3LIti' class='btn btn-info' role='button'>Take me to the survey</a>";
+    scoreDiv.innerHTML += "<a href='https://survey.sogosurvey.com/r/H3LIti' class='btn btn-info btn-lg' role='button'>Take me to the survey</a>";
 ;
 
 
