@@ -315,7 +315,7 @@ function scoreRender() {
 
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + "<br>" + "You scored " + scorePerCent + "/" + questions.length + "<br>" + feedback + "</p>";
-    scoreDiv.innerHTML += "<a href='https://www.sogosurvey.com' class='btn btn-info' role='button'>Take me to the survey</a>";
+    scoreDiv.innerHTML += "<a href='https://survey.sogosurvey.com/r/H3LIti' class='btn btn-info' role='button'>Take me to the survey</a>";
 
 
 }
