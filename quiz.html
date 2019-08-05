@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.png">
+
 </head>
 <body>
     <div id="container">
@@ -38,42 +39,23 @@
             <div class="close" id="closeButton" onclick="closeButton('closeButton')"></div>
         </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-            <!-- Modal content -->
+        <div id="modal" class="">
             <div class="modal-content">
                 <div class="modal-header">
+                    <h2 class="wrong">Wrong!</h2>
+                    <h2 class="correct">Correct!</h2>
                     <span class="close">&times;</span>
-                    <h2>Correct!</h2>
                 </div>
-                <div class="modal-body">
-                    
+                <div class="modal-body" id="mb">
+
                 </div>
                 <div class="modal-footer">
-
-                    <h3>Great work</h3>
+                    <h3 class="wrong">Better luck next time</h3>
+                    <h3 class="correct">Great work</h3>
                 </div>
             </div>
         </div>
-            <!-- wrongModal -->
-            <div id="wrongModal" class="wrongModal">
-
-                <!-- wrongModal content -->
-                <div class="wrongModal-content">
-                    <div class="wrongModal-header">
-                        <span class="close">&times;</span>
-                        <h2>Wrong!</h2>
-                    </div>
-                    <div class="wrongModal-body">
-                        
-                    </div>
-                    <div class="wrongModal-footer">
-                        <h3>Better luck next time</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
     <script src="quiz.js"></script>
 </body>
-    </html>
+</html>
