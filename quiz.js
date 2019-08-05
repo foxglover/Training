@@ -35,8 +35,8 @@ let questions = [
         choiceB: "3 words joined together",
         choiceC: "Your favourite sports team",
         choiceD: "Your pet's name",
-        feedback: "Excellent work! The NCSC recommend using 3 random words together or using a password manager",
-        wrongFeedback: "Sorry, this is wrong. The NCSC recommend using 3 random words together, or using a password manager",
+        feedback: "Excellent work! The NCSC recommend using 3 random words together",
+        wrongFeedback: "Sorry, this is wrong. The NCSC recommend using 3 random words together",
         correct: "B"
 
     }, {
@@ -47,10 +47,10 @@ let questions = [
         choiceC: "A new life situation, such as buying a house",
         choiceD: "Having a weak password, such as <br/> 'I love you'",
         feedback: "This is true! Give yourself more time to respond to enquiries and phone calls when you find yourself in a new life situation \
-i.e. a divorce, an exciting new business, a new baby, a bereavement, getting married or in a new relationship.",
+i.e. a divorce, an exciting new business, a new baby or a bereavement.",
         wrongFeedback: "'New life situation' is the correct answer. This has a significant impact on the success of social engineering attacks. \
-Give yourself more time to respond to requests when you find yourself in a new life situation, such as a divorce, an exciting new business, a new relationship or baby, \
-getting married, or a bereavement.",
+Give yourself more time to respond to requests when you find yourself in a new life situation, such as a divorce, an exciting new business, \
+or a bereavement.",
         correct: "C"
     }, {
 
@@ -74,9 +74,9 @@ usually mean the maunfacturer has become aware of a hackable flaw in your softwa
         choiceC: "Their proposition sounds like it could make you some quick money",
         choiceD: "All of the above",
         feedback: "Correct! If unsure, hang up the phone, look up their legitimate number online. Wait 10 minutes before calling back in case your're still \
-connected, or call with a different phone to verify that it's legitimate. ",
+connected, or call with a different phone. ",
         wrongFeedback: "Sorry, this is wrong. If unsure of who you're talking to, hang up the phone, look up their legitimate number online. Wait 10 minutes \
-before calling back in case your're still connected, or call with a different phone to verify that it's legitimate. ",
+before calling back in case your're still connected, or call with a different phone. ",
         correct: "D"
     }, {
         question: "Who should you contact to report internet or telephone fraud?",
@@ -304,11 +304,15 @@ function scoreRender() {
                     "img/1.png";
 
     // choose the feedback based on the scorePerCent
-    let feedback = (scorePerCent >= 5) ? "Well done, you really know your stuff!" :
-        (scorePerCent >= 4) ? "Pretty good work! " :
-            (scorePerCent >= 3) ? "Good effort, but you and your customers may still be vulnerable. Consider looking over the training again" :
-                (scorePerCent >= 2) ? "In order to protect yours and your customer data please consider looking again at the training" :
-                    " You (and therefore your customers), are vulnerable to fraud. Please consider looking again at the training";
+    let feedback = (scorePerCent >= 5) ? "Well done, you really know your stuff!</br></br>It's important \
+for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+        (scorePerCent >= 4) ? "Pretty good! You're well on your way to staying safe </br></br>It's important \
+for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+            (scorePerCent >= 3) ? "Good effort!.</br></br>It's important \
+for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+                (scorePerCent >= 2) ? "Good effort!</br></br>It's important \
+for the research that you now complete the survey if you didn't complete one at the start. Thank you!" :
+                    "Well done for trying.</br></br>It's important for the research that you now complete the survey if you didn't complete one at the start. Thank you!";
 
 
 
@@ -316,6 +320,7 @@ function scoreRender() {
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + "<br>" + "You scored " + scorePerCent + "/" + questions.length + "<br>" + feedback + "</p>";
     scoreDiv.innerHTML += "<a href='https://survey.sogosurvey.com/r/H3LIti' class='btn btn-info' role='button'>Take me to the survey</a>";
+;
 
 
 }
