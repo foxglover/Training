@@ -14,14 +14,14 @@
 <body>
     <div class="jumbotron jumbotron-fluid" style="background-color:darkcyan">
         <div class="container">
-            <h1 style="color:floralwhite" ;>Social Engineering Educational Videos</h1>
+            <h1 style="color:floralwhite" ;>Social Engineering Educational Videos for the Self Employed</h1>
             <p style="color:floralwhite" ;>This is a 10 minute video series explaining why social engineering awareness is important for your business. Please watch the whole video and then click through to the 3 minute quiz</pstyle="color:floralwhite;>
         </div>
     </div>
     <div id="videos" style="text-align:center;">
 
         <div style="text-align:center;">
-            <a align="center" href="quiz.html" class="btn btn-lg btn-primary" role="button" style="margin-top:10px;"><b>I've watched the video - take me to the Quiz</b></a>
+            <a align="center" href="quiz.html" class="btn btn-lg btn-success" role="button" style="margin-top:10px;"><b>I've watched the video - take me to the Quiz</b></a>
         </div>
         <div>
             <iframe padding="20px" width="640" height="360" style="margin-top:25px; margin-bottom:25px" src="https://www.youtube.com/embed/videoseries?list=PLw6EX1OZfwnmtUD4MFhsfkW-_barwWnJa&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -34,96 +34,42 @@
             <p style="color:floralwhite; text-align:center;">You can re-watch individual parts of the video again by clicking one of the following:</p>
         </div>
 
-        <div class="buttons" style="text-align:center;">
-            <div class="button display">
+        
 
 
-                <!--     <div class="btn-group btn-group-lg">
-             <button type="button" class="btn btn-primary" onclick="play1()">Introduction</button>
-             <button type="button" class="btn btn-primary" onclick="play2()">Phishing and Phone Scams</button>
-             <button type="button" class="btn btn-primary" onclick="play3()">Passwords and Security </button>
-             <button type="button" class="btn btn-primary" onclick="play4()">What to do in an attack</button>
-         </div>
-        -->
+        <div class="container-fluid">
+            <div class="row">
+                <h1 align="center" style="color:floralwhite;">Social Engineering Educational Videos in Sections</h1>
 
-                <div id="videos">
-                    <h1 align="center" style="color:floralwhite;">Social Engineering Educational Videos</h1>
+                <div class="col-sm">
+                    <iframe width="426" height="240" style="float:left;padding:5px;" position="absolute" src="https://www.youtube.com/embed/KSy2OPHV0AQ" frameborder="0" allow ="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                    <div id="videos">
-                        <video id="video1" width="420" style="float:left;padding:5px;" position="absolute"  poster="img/why1.jpg" controls>
-                            <source src="video/introVideo.mp4" type="video/mp4">
-                            <source src="mov_bbb.ogg" type="video/ogg">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div id="videos">
-                        <video id="video1" width="420" style="float:right; padding:5px;" position="absolute"  poster="img/phishing.jpg" controls>
-                            <source src="video/phishingVideo.mp4" type="video/mp4">
-                            <source src="mov_bbb.ogg" type="video/ogg">
-                            Your browser does not support HTML5 video.
-                        </video>
+                </div>
 
-                    </div>
-                    <div id="videos">
-                        <video id="video1" width="420" style="float:left; padding:5px;" position="absolute" poster="img/whyHack.jpg" controls>
-                            <source src="video/passwordVideo.mp4" type="video/mp4">
-                            <source src="mov_bbb.ogg" type="video/ogg">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div>
-                        <div id="videos">
-                            <video id="video1" width="420" style="float:right;padding:5px;" position="absolute" style="float:right; padding:5px;" poster="img/what.jpg" controls>
-                                <source src="video/actionVideo.mp4" type="video/mp4">
-                                <source src="mov_bbb.ogg" type="video/ogg">
-                                Your browser does not support HTML5 video.
-                            </video>
-                        </div>
+                <div class="col-sm">
+                    <iframe width="426" height="240" style="float:right; padding:5px;" position="absolute" src="https://www.youtube.com/embed/KKLr-4Tgs0U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                        <div id="youtube-frame"></div>
+                </div>
+</div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm">
+                        <iframe width="426" height="240" style="float:left; padding:5px;" position="absolute" src="https://www.youtube.com/embed/8aCKmfW-Vag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     </div>
 
+                    <div class="col-sm">
+                        <iframe width="426" height="240" style="float:right; padding:5px;" position="absolute " src="https://www.youtube.com/embed/xdYV54WtqeE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                    <div style="text-align:center;">
+                        <a align="center" href="quiz.html" class="btn btn-lg btn-success" role="button" style="margin-top:10px;"><b>Take me to the Quiz</b></a>
+                    </div>
+                    
+                    <div class="footer">
+                        <p>jennifer.sercombe@postgrad.plymouth.ac.uk</p>
+                    </div>
 </body>
-
-<script>
-    function play1() {
-        var frame = document.getElementById("youtube-frame");
-        frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KSy2OPHV0AQ' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-    }
-
-    function play2() {
-        var frame = document.getElementById("youtube-frame");
-        frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/KKLr-4Tgs0U' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-    }
-    function play3() {
-        var frame = document.getElementById("youtube-frame");
-        frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/8aCKmfW-Vag' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-    }
-    function play4() {
-        var frame = document.getElementById("youtube-frame");
-        frame.innerHTML += "<iframe width='560' height='315' src='https://www.youtube.com/embed/xdYV54WtqeE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
-    }
-    
-        var myVideo = document.getElementById("video1");
-                                function playPause() {
-                                    if (myVideo.paused)
-            myVideo.play();
-        else
-            myVideo.pause();
-    }
-                                function makeBig() {
-            myVideo.width = 1060;
-        }
-                                function makeSmall() {
-            myVideo.width = 420;
-        }
-                                function makeNormal() {
-            myVideo.width = 540;
-        }
-
-</script>
-    
 
 </html>
 

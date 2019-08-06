@@ -54,16 +54,14 @@ or a bereavement.",
         correct: "C"
     }, {
 
-        question: "Why is installing updates essential to security?",
-        imgSrc: "img/update.jpg",
-        choiceA: "They ensure your system runs fast",
-        choiceB: "They provide the newest features to make everything state of the art",
-        choiceC: "Software has flaws. Updates provide fixes to stop hackers exploting them",
-        choiceD: "It isn't. It's best to delay updates for as long as possible",
-        feedback: "Correct! Security updates usually mean the manufacturer has become aware of a hackable flaw in your software. Installing updates provides a \
-'patch' to fix the problem and protect your system. ",
-        wrongFeedback: "Wrong! The correct answer is 'Software has flaws which hackers exploit. Updates provide fixes to stop them' Security updates \
-usually mean the maunfacturer has become aware of a hackable flaw in your software. Installing updates provides a 'patch' to fix the problem and protect your system",
+        question: "How could you protect against some of the effects of a 'ransomware' attack?",
+        imgSrc: "img/why.jpg",
+        choiceA: "Completely shut down your device when you aren't using it",
+        choiceB: "Make sure your devices are state of the art",
+        choiceC: "Back up data in the cloud, or on an external device",
+        choiceD: "Ensure you have the consent of your customers to store their data",
+        feedback: "Correct! You need to back up your important data. This means that even if someone has locked your files and is demanding a ransom for their release, you will be able to access your files elsewhere. ",
+        wrongFeedback: "Wrong! You need to back up your important data. This means that even if someone has locked your files and is demanding a ransom for their release, you will be able to access your files elsewhere. ",
         correct: "C"
     },
     {
@@ -81,13 +79,13 @@ before calling back in case your're still connected, or call with a different ph
     }, {
         question: "Who should you contact to report internet or telephone fraud?",
         imgSrc: "img/police.jpg",
-        choiceA: "Fraud Reporters  . ",
-        choiceB: "Action Fraudsters",
+        choiceA: "Action Fraud",
+        choiceB: "Attention Fraudsters",
         choiceC: "Assess Fraud",
-        choiceD: "Action Fraud",
+        choiceD: "Fraud Cops",
         feedback: "Good thinking! Reporting to Action Fraud helps protect others and catch criminals.",
         wrongFeedback: "The correct answer is 'Action Fraud'. Reporting fraud helps protect others and catch criminals.",
-        correct: "D"
+        correct: "A"
     },
 
 
